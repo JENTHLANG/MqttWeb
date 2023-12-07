@@ -9,32 +9,38 @@ function BtnConnect(){
     user_name = document.getElementById("box_user").value;
     pass_word = document.getElementById("box_password").value
 
+    if(clientID != '' && host != '' && port != '' && user_name != '' && pass_word != '')
+    {
+      client = new Paho.MQTT.Client(host, Number(port), clientID);
 
-    // Create a client instance
-// client = new Paho.MQTT.Client('e8f424ec.emqx.cloud', 8083, "test");
-client = new Paho.MQTT.Client(host, Number(port), clientID);
+      // set callback handlers
+      client.onConnectionLost = onConnectionLost;
+      client.onMessageArrived = onMessageArrived;
 
-// set callback handlers
-client.onConnectionLost = onConnectionLost;
-client.onMessageArrived = onMessageArrived;
+      // connect the client
+      client.connect({
+          onSuccess:onConnect,
+          userName: user_name,
+          password: pass_word,
+          mqttVersion:4
+      });
+    }
+    else{
+      alert('Please fill the broker information in boxs.');
+    }
 
-// connect the client
-client.connect({
-    onSuccess:onConnect,
-    userName: user_name,
-    password: pass_word,
-    mqttVersion:3,
-    
-});
+
 
 }
 
 // called when the client connects
 function onConnect() {
     // Once a connection has been made, make a subscription and send a message.
-    // console.log("onConnect");
-    alert("Connected Successfully");
-    connection_status = true ;
+    console.log("onConnect");
+    document.getElementById('btn_connect').disabled = true ;
+    document.getElementById('btn_disconnect').disabled = false ;
+    alert("Successfull connect to Broker!");
+    connection_status=true;
     // client.subscribe("World");
     // message = new Paho.MQTT.Message("Hello");
     // message.destinationName = "World";
@@ -45,15 +51,17 @@ function onConnect() {
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
       console.log("onConnectionLost:"+responseObject.errorMessage);
+      alert("onConnectionLost:"+responseObject.errorMessage);
     }
   }
   
   // called when a message arrives
   function onMessageArrived(message) {
-    
+    const newMessage ="";
     console.log("onMessageArrived:"+message.payloadString);
-    document.getElementById("txt_sub").value = message.payloadString + '\n' ;
+    document.getElementById("txt_sub").value += message.payloadString + '\n';
   }
+  
 
   function sub_topic()
   {
@@ -63,15 +71,33 @@ function onConnect() {
         subTopic = document.getElementById("box_topic").value;
         qos = document.getElementById("box_QoS").value;
         client.subscribe(subTopic);
+        alert('this topic was subscribe!');
     }
   }
 
   function pub_topic()
   {
-    pubTopic = document.getElementById("box_pub").value;
-    payload = document.getElementById("txt_pub").value;
+    if(connection_status)
+    {
+      pubTopic = document.getElementById("box_pub").value;
+      payload = document.getElementById("txt_pub").value;
+  
+      message = new Paho.MQTT.Message(payload);
+      message.destinationName = pubTopic;
+      client.send(message);
+      // alert('this topic was published to broker!');
+    }
+    
+  }
 
-    message = new Paho.MQTT.Message(payload);
-    message.destinationName = pubTopic;
-    client.send(message);
+  function btnDiscon()
+  {
+    
+      client.disconnect();
+      document.getElementById('btn_disconnect').disabled = true ;
+      document.getElementById('btn_connect').disabled = false ;
+      alert('Disconnect successfull');
+      connection_status=false;
+      
+    
   }
