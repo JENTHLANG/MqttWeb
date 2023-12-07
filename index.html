@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT_FORM</title>
+    <link rel="stylesheet" href="style1.css">
+    <!-- <script src= "https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js" type="text/javascript"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/mqttws31.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script> -->
+    <!-- Paho MQTT JavaScript library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/mqttws31.min.js"></script> -->
+    <!-- <script src="MqttLib.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.js"></script>
+
+    <script src="demo.js"></script>
+</head>
+<body>
+     
+        <div class="top_bar">
+            <h1 id="title">MQTT Terminal</h1>
+            <h1 id="company">IMPRO TEK</h1>
+        </div>
+        
+        <div class="connection_box">
+            <label id="label_host">Host</label>
+            <input type="text" id="box_host" placeholder="e8f424ec.emqx.cloud">
+            
+            <label id="label_port">Port</label>
+            <input type="number" id="box_port" placeholder="8083"><br><br>
+
+            <label id="label_user">Username</label>
+            <input type="text" id="box_user" placeholder="RTU2024">
+
+            <label id="label_password">Password</label>
+            <input type="password" id="box_password" placeholder="improtechrtu2024"><br><br>
+
+            <label id="label_connectionName">Connection Name</label>
+            <input type="text" id="box_conName" placeholder="Any name">
+
+            <label id="label_client_id">Client ID</label>
+            <input type="text" id="box_clientID" placeholder="Home"><br><br>
+
+            <label id="label_timeOut">Connection TimeOut</label>
+            <input type="number" id="box_timeOut" placeholder="10">
+
+            <label id="label_keepalive">Keep alive</label>
+            <input type="number" id="box_keepalive" placeholder="60"><br>
+
+            <button id="btn_connect" onclick="BtnConnect()">Connect</button>
+            <button id="btn_disconnect">Disconnect</button><br>
+
+        </div>
+        <div class="sub_box">
+            <label id="ConnectionName">Device Name</label>
+            <hr style="width: 87%; position:absolute;top: 65px;left: 50px;"/>
+            <label id="label_topic" >Topic</label>
+            <input type="text" id="box_topic" placeholder="Topic/massage">
+            <label id="label_QoS">QoS</label>
+            <input type="number" id="box_QoS" placeholder="0">
+
+            <button id="btn_sub" onclick="sub_topic()">Subscribe</button><br>
+
+            <textarea name="textsub" id="txt_sub" cols="30" rows="10"></textarea>
+        </div>
+        <div class="pub_box">
+            <label id="label_pub">Publisher</label>
+            <hr style="width: 87%;position: absolute;top: 65px;left: 50px;">
+
+            <label id="label_topic_pub">Topic</label><br>
+            <input type="text" name="" id="box_pub" placeholder="Topic/1">
+
+            <label id="label_QoS_pub">Qos</label><br>
+            <input type="number" name="" id="box_QoS_pub" placeholder="0">
+
+            <input type="checkbox" id="check_box">
+            <h6>Retain</h6>
+            <button id="btn_pub" onclick="pub_topic()">Publish</button><br>
+
+            <textarea name="textpub" id="txt_pub" cols="30" rows="10"></textarea>
+            
+        </div>
+        <br><br><br>   
+        <br><br><br>
+        <br><br><br>
+           
+       
+</body>
+
+</html>

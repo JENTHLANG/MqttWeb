@@ -1,0 +1,402 @@
+body{
+    
+    /* background-color: antiquewhite; */
+    overflow-y: scroll;
+    
+}
+
+.top_bar{
+    
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(139, 0, 81);
+    /* margin: 0px 0px 0px ;
+    border: none;
+    padding: 0px 0px 0px 0px; */
+    
+    box-shadow: 1px 5px 5px;
+    margin: auto;
+
+}
+#title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    /* margin: 0%; */
+    /* padding-left: 60px;
+    padding-top: 30px; */
+    /* text-align: left; */
+    position: relative;
+    top: 15px;
+    margin-left: 50px;
+    
+    
+}
+#company{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    top: 15px;
+    margin-left: 1200px;
+    
+}
+
+.connection_box{
+    display: block;
+    
+    width: 1130px;
+    height: 420px;
+    /* background-color: aquamarine; */
+    margin: auto;
+    
+
+    position: relative;
+    top: 50px;
+    /* left: 300px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;   
+    box-shadow: 3px 3px 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    
+
+    /* margin-top: 30px; */
+}
+
+/* ----------------------label posistion1------------------- */
+.connection_box #label_host{
+    position: relative;
+    top: 35px;
+    left: 50px;
+}
+
+.connection_box #label_user{
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.connection_box #label_connectionName{
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+.connection_box #label_timeOut{
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+/* ----------------------label posistion2------------------- */
+.connection_box #label_port{
+    position: relative;
+    top: 35px;
+    left: 300px;
+}
+.connection_box #label_password{
+    position: relative;
+    top: 30px;
+    left: 225px;
+}
+.connection_box #label_client_id{
+    position: relative;
+    top: 35px;
+    left: 120px;
+}
+.connection_box #label_keepalive{
+    position: relative;
+    top: 35px;
+    left: 85px;
+}
+
+/* ----------------------box posistion------------------- */
+.connection_box #box_host{
+    position: relative;
+    top: 25px;
+    left: 280px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_user{
+    position: relative;
+    top: 25px;
+    left: 205px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_conName{
+    position: relative;
+    top: 25px;
+    left: 105px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_timeOut{
+    position: relative;
+    top: 25px;
+    left: 75px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/* ----------------------box posistion2------------------- */
+.connection_box #box_port{
+    position: relative;
+    top: 25px;
+    left: 400px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_password{
+    position: relative;
+    top: 25px;
+    left: 250px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_clientID{
+    position: relative;
+    top: 25px;
+    left: 165px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.connection_box #box_keepalive{
+    position: relative;
+    top: 25px;
+    left: 105px;
+    width: 250px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/* ----------connect and disconnect button------------- */
+
+.connection_box #btn_connect{
+   
+    position: relative;
+    top: 90px;
+    left: 130px;
+    width: 400px;
+    height: 44px;
+    
+    border-radius: 22px;
+    background: cornflowerblue;
+    font-size: 20px;
+}
+#btn_connect:hover{
+   
+    background-color:rosybrown;
+}
+
+.connection_box #btn_disconnect{
+
+    position: relative;
+    top: 90px;
+    left: 190px;
+    width: 400px;
+    height: 44px;
+    
+    border-radius: 22px;
+    background: cornflowerblue;
+    font-size: 20px;
+}
+#btn_disconnect:hover{
+    background-color: rosybrown;
+}
+
+/* ------------------------Subscripe------------ */
+.sub_box{
+    display: block;
+    
+    width: 1130px;
+    height: 450px;
+    /* background-color: aquamarine; */
+    margin: auto;
+
+    position: relative;
+    top: 100px;
+    /* left: 300px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;   
+    box-shadow: 3px 3px 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    
+}
+
+.sub_box #ConnectionName{
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+.sub_box #label_topic{
+
+    position: absolute;
+    top:130px;
+    left: 50px;
+
+}
+#box_topic{
+    position: absolute;
+    width: 250px;
+    height: 26px;
+    border-radius: 13px;
+    top:130px;
+    left: 150px;
+    font-size: 15px ;
+}
+#label_QoS{
+    position: absolute;
+    top:130px;
+    left: 450px;
+}
+#box_QoS{
+    position: absolute;
+    width: 250px;
+    height: 26px;
+    border-radius: 13px;
+    top:130px;
+    left: 520px;
+    font-size: 15px ;
+}
+#btn_sub{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background: cornflowerblue;
+    border-radius: 15px;
+    top:130px;
+    left: 850px;
+}
+#btn_sub:hover{
+    background-color: blanchedalmond;
+}
+
+#txt_sub{
+    position:absolute;
+    top: 200px;
+    left: 50px;
+    width: 1000px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+/* ----------------pubish message---------------- */
+
+.pub_box{
+    display: block;
+    
+    width: 1130px;
+    height: 300px;
+    /* background-color: aquamarine; */
+
+    margin: auto;
+
+    position: relative;
+    top: 150px;
+    /* left: 300px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;   
+    box-shadow: 3px 3px 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    /* margin-top: 30px; */
+}
+
+#label_pub{
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+#label_topic_pub{
+    position: absolute;
+    top:130px;
+    left: 50px;
+}
+#box_pub{
+    position: absolute;
+    width: 250px;
+    height: 26px;
+    border-radius: 13px;
+    top:130px;
+    left: 150px;
+    font-size: 15px ;
+}
+#label_QoS_pub{
+    position: absolute;
+    top:130px;
+    left: 450px;
+}
+#box_QoS_pub{
+    position: absolute;
+    width: 250px;
+    height: 26px;
+    border-radius: 13px;
+    top:130px;
+    left: 520px;
+    font-size: 15px ;
+}
+#btn_pub{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background: cornflowerblue;
+    border-radius: 15px;
+    top:130px;
+    left: 850px;
+}
+#btn_pub:hover{
+    background-color: blanchedalmond;
+}
+#check_box{
+    position: absolute;
+    top: 50px;
+    left: 920px;
+}
+h6{
+    position: absolute;
+    top: 0px;
+    left: 950px;
+}
+#txt_pub{
+    position:absolute;
+    top: 200px;
+    left: 50px;
+    width: 1000px;
+    height: 65px;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+
