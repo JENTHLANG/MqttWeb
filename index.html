@@ -5,23 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MQTT_FORM</title>
     <link rel="stylesheet" href="style1.css">
-    <!-- <script src= "https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js" type="text/javascript"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/mqttws31.min.js"></script> -->
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script> -->
-    <!-- Paho MQTT JavaScript library -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/mqttws31.min.js"></script> -->
-    <!-- <script src="MqttLib.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.js"></script>
-
+    <script src="MqttLib.js"></script>
     <script src="demo.js"></script>
 </head>
 <body>
      
         <div class="top_bar">
             <h1 id="title">MQTT Terminal</h1>
-            <h1 id="company">IMPRO TEK</h1>
+            <h1 id="company">IMPRO TECH</h1>
         </div>
         
         <div class="connection_box">
@@ -50,7 +43,7 @@
             <input type="number" id="box_keepalive" placeholder="60"><br>
 
             <button id="btn_connect" onclick="BtnConnect()">Connect</button>
-            <button id="btn_disconnect">Disconnect</button><br>
+            <button id="btn_disconnect" disabled onclick="btnDiscon()">Disconnect</button><br>
 
         </div>
         <div class="sub_box">
